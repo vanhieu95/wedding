@@ -20,7 +20,7 @@
     background-repeat: no-repeat;
     padding: 12rem 0 0;
     width: 30ch;
-    min-height: 480px;
+    min-height: 300px;
     border-radius: 0.5rem;
     overflow: hidden;
   }
@@ -28,6 +28,7 @@
   .card-content {
     --card-padding: 1.5rem;
     padding: var(--card-padding);
+    padding-top: calc(var(--card-padding) / 3);
     background: linear-gradient(
       hsl(0 0% 0% / 0),
       hsl(0 0% 0% / 0.35) 20%, 
@@ -53,7 +54,7 @@
   }
 
   .card-body {
-    color: white;
+    color: var(--clr-accent-700);
   }
 
   @media(hover) {

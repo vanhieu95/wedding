@@ -64,8 +64,10 @@ select {
 }
 
 :root {
-  --clr-accent-400: #fdf6e2;
-  --clr-accent-700: #fefaf1;
+  --clr-accent-400: #ffd300;
+  --clr-accent-700: #fce205;
+  --clr-secondary-400: #fdf6e2;
+  --clr-secondary-700: #fefaf1;
 }
 
 .container {
@@ -90,9 +92,21 @@ section {
 
 .section-title {
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(1.25rem, 2vw + 0.325rem, 3.5rem);
+  font-size: clamp(1.25rem, 5vw + 0.325rem, 3.5rem);
   letter-spacing: 3px;
+  color: var(--clr-accent-400);
   text-align: center;
+}
+
+.about-us-content {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-us-content {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .diagonal {
