@@ -18,9 +18,14 @@
     color: var(--clr-primary-400);
     background-image:  var(--header-background);
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
+  }
+
+  @media(hover) {
+    .site-header {
+      background-attachment: fixed;
+    }
   }
 </style>
