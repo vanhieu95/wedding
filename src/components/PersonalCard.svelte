@@ -13,22 +13,24 @@
 
 <style>
   .card {
-    color: var(--clr-accent-400);
+    position: relative;
+    color: var(--clr-accent-700);
     background-image: var(--card-background);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 12rem 0 0;
     width: 30ch;
-    min-height: 300px;
+    min-height: 380px;
     border-radius: 0.5rem;
+    box-shadow: 0 -5px 3px -3px black, 0 5px 3px -3px black;
     overflow: hidden;
   }
-
   .card-content {
+    min-height: 200px;
     --card-padding: 1.5rem;
     padding: var(--card-padding);
-    padding-top: calc(var(--card-padding) / 3);
+    padding-top: 2.5rem;
     background: linear-gradient(
       hsl(0 0% 0% / 0),
       hsl(0 0% 0% / 0.35) 20%, 
@@ -54,7 +56,7 @@
   }
 
   .card-body {
-    color: var(--clr-accent-700);
+    color: var(--clr-accent-400);
   }
 
   @media(hover) {
@@ -62,7 +64,7 @@
       transition: scale 500ms ease; 
     }
 
-    .card:hover {
+    .card:is(:hover) {
       scale: 1.05;
     }
 
@@ -71,12 +73,12 @@
       transition: translate 500ms ease;
     }
 
-    .card:hover .card-content {
+    .card:is(:hover) .card-content {
       translate: 0 0;
       transition-delay: 500ms;
     }
 
-    .card:hover .card-content > * {
+    .card:is(:hover) .card-content > * {
       opacity: 1;
       transition-delay: 1000ms;
     }
@@ -92,7 +94,7 @@
       transition: scale 500ms ease;
     }
 
-    .card:hover .card-title::after {
+    .card:is(:hover) .card-title::after {
       scale: 1;
     }
   }

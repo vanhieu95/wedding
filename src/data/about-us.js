@@ -1,12 +1,23 @@
-export const data = {
-  bride: {
+export const data = [
+  {
+    id: 1,
+    type: 'bride',
+    isCard: true,
     name: 'Nguyễn Thị Thúy Vân',
     content:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo modi provident, necessitatibus dicta dolorum dignissimos cupiditate.'
+      'Người phụ nữ hiền diệu, biết thấu hiểu. Ưu điểm ăn nhiều nhưng không lên cân.'
   },
-  groom: {
+  {
+    id: 2,
+    type: 'love',
+    isCard: false,
+    name: 'Heart'
+  },
+  {
+    id: 3,
+    type: 'groom',
+    isCard: true,
     name: 'Nguyễn Lương Trung Hiếu',
-    content:
-      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo modi provident, necessitatibus dicta dolorum dignissimos cupiditate.'
+    content: 'Người con trai dễ thương, chăm chỉ. Ưu điểm là biết sợ vợ.'
   }
-}
+]

@@ -63,11 +63,35 @@ select {
   }
 }
 
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
 :root {
-  --clr-accent-400: #ffd300;
-  --clr-accent-700: #fce205;
-  --clr-secondary-400: #fdf6e2;
-  --clr-secondary-700: #fefaf1;
+  --clr-primary-400: #e64f64;
+  --clr-accent-400: #b0d5c0;
+  --clr-accent-700: #47b2bd;
+  --clr-accent-800: #217071;
+  --clr-secondary-400: #fcb2a9;
+  --clr-secondary-700: #e76ba7;
+  --clr-neutral-200: #fffff8;
+  --clr-neutral-400: #c2c2c0;
+  --clr-neutral-700: #989ca0;
+  --clr-neutral-800: #192331;
+}
+
+body {
+  /* --body-background: linear-gradient(
+    45deg,
+    var(--clr-accent-400),
+    var(--clr-accent-700)
+  ); */
+
+  --body-background: white;
+
+  background: var(--body-background);
 }
 
 .container {
@@ -86,29 +110,6 @@ select {
   backdrop-filter: sepia(15%);
 }
 
-section {
-  padding-block: 5rem;
-}
-
-.section-title {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(1.25rem, 5vw + 0.325rem, 3.5rem);
-  letter-spacing: 3px;
-  color: var(--clr-accent-400);
-  text-align: center;
-}
-
-.about-us-content {
-  display: grid;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-us-content {
-  grid-template-columns: repeat(3, 1fr);
-}
-
 .diagonal {
   --skew-angle: -3deg;
   --background-color: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
@@ -124,4 +125,51 @@ section {
   z-index: -1;
   background-image: var(--background-color);
   transform: skewY(var(--skew-angle));
+}
+
+.spikes {
+  --spike-width: 50px;
+  --spike-height: 10px;
+  --spike-color: var(--body-background);
+
+  position: relative;
+  background: linear-gradient(
+    to right,
+    var(--clr-neutral-400),
+    var(--clr-neutral-700)
+  );
+}
+
+.spikes::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: var(--spike-height);
+  background: var(--spike-color);
+  -webkit-mask-image: url('../assets/triangle.svg');
+  -webkit-mask-size: var(--spike-width) var(--spike-height);
+  /* -webkit-mask-repeat: repeat-x; */
+  mask-image: url('../assets/triangle.svg');
+  mask-size: var(--spike-width) var(--spike-height);
+  /* mask-repeat: repeat-x; */
+}
+
+.spikes::before {
+  top: 0;
+}
+
+.wavy {
+  background: linear-gradient(to right, #00f260, #0575e6);
+
+  --mask: radial-gradient(50.39px at 50% 68.75px, #000 99%, #0000 101%)
+      calc(50% - 50px) 0/100px 51% repeat-x,
+    radial-gradient(50.39px at 50% -43.75px, #0000 99%, #000 101%) 50% 25px/100px
+      calc(51% - 25px) repeat-x,
+    radial-gradient(50.39px at 50% calc(100% - 68.75px), #000 99%, #0000 101%)
+      calc(50% - 50px) 100%/100px 51% repeat-x,
+    radial-gradient(50.39px at 50% calc(100% + 43.75px), #0000 99%, #000 101%)
+      50% calc(100% - 25px) / 100px calc(51% - 25px) repeat-x;
+
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }

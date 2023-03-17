@@ -15,10 +15,9 @@
     display: flex;
     align-items: end;
     padding-block-end: 3rem;
-    color: var(--clr-accent-400);
+    color: var(--clr-primary-400);
     background-image:
-      var(--header-background),
-      linear-gradient(45deg, var(--clr-secondary-400), var(--clr-secondary-700));
+      var(--header-background);
     background-size: contain;
     background-attachment: fixed;
     background-position: center;

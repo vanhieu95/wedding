@@ -15,8 +15,28 @@
 </section>
 
 <style>
+  section {
+    padding-block: 5rem;
+  }
+
+  .section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(1.25rem, 5vw + 0.325rem, 3.5rem);
+    letter-spacing: 3px;
+    color: var(--clr-primary-400);
+    text-align: center;
+    margin-block-end: 2rem;
+  }
+
   .about-us {
-    background-image: var(--about-us-background-mobile);
+    /* background-image: var(--about-us-background-mobile); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .event {
+    background-image: var(--event-background);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,7 +44,7 @@
 
   @media (min-width: 50rem) {
     .about-us {
-      background-image: var(--about-us-background-desktop);
+      /* background-image: var(--about-us-background-desktop); */
     }
   }
 </style>

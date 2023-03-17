@@ -14,6 +14,7 @@
     "vite": "^4.1.0"
   },
   "dependencies": {
+    "@slidy/svelte": "^3.4.2",
     "svelte-countdown": "^1.1.2"
   }
 }

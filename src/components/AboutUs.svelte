@@ -5,12 +5,31 @@
   import GroomImage from '../assets/hieu.jpg';
   import Heart from '../assets/heart.gif';
 
-  const {bride, groom} = about;
-  import {data as about} from '../data/about-us';
+  import {data} from '../data/about-us';
 </script>
 
 <div class="about-us-content">
-  <PersonalCard title="{bride.name}" body="{bride.content}" url={BrideImage} />
-  <img src={Heart} alt="Love heart">
-  <PersonalCard title="{groom.name}" body="{groom.content}" url={GroomImage} />
+  {#each data as item (item.id)}
+    {#if item.isCard }
+      <PersonalCard title="{item.name}" body="{item.content}" url={ item.type === 'bride' ? BrideImage : GroomImage} />
+    {:else}
+      <img src={Heart} alt="Love heart">
+    {/if}
+  {/each}
 </div>
+
+<style>
+  .about-us-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (min-width: 60rem) {
+    .about-us-content {
+      flex-direction: row;
+    }
+  }
+</style>
