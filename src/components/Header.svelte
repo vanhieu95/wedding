@@ -1,8 +1,4 @@
-<script>
-  import HeaderBackground from '../assets/hieu-and-van.jpg';
-</script>
-
-<header class="site-header" style="--header-background: url({HeaderBackground}">
+<header class="site-header">
   <div class="site-title">  
     <p>Save the date</p>
     <h1>Trung Hiếu & Thúy Vân</h1>
@@ -16,9 +12,8 @@
     align-items: end;
     padding-block-end: 3rem;
     color: var(--clr-primary-400);
-    background-image:
-      var(--header-background);
-    background-size: contain;
+    background-image: url('../assets/hieu-and-van.jpg');
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
