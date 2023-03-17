@@ -6,6 +6,7 @@
   import Greetings from './components/Greetings.svelte'
   import Albums from './components/Albums.svelte'
 
+  import HeaderBackground from './assets/hieu-and-van.jpg';
   import AboutUsBackgroundDesktop from './assets/about-us-desktop.jpg';
   import AboutUsBackgroundMobile from './assets/about-us-mobile.jpg';
   import EventBackground from './assets/aqua-palace.jpg'
@@ -14,7 +15,7 @@
   const { aboutUs, event, greetings, albums } = sections;
 </script>
 
-<Header />
+<Header headerStyle="--header-background: url({HeaderBackground})"/>
 
 <main>
   <Section {...aboutUs} 

@@ -1,4 +1,8 @@
-<header class="site-header">
+<script>
+  export let headerStyle = null;
+</script>
+
+<header class="site-header" style={headerStyle}>
   <div class="site-title">  
     <p>Save the date</p>
     <h1>Trung Hiếu & Thúy Vân</h1>
@@ -12,17 +16,11 @@
     align-items: end;
     padding-block-end: 3rem;
     color: var(--clr-primary-400);
-    background-image: url('../assets/hieu-and-van.jpg');
+    background-image:  var(--header-background);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     min-height: 100vh;
-  }
-
-  @media (min-width: 50rem) {
-    .site-header {
-      background-size: cover;
-    }
   }
 </style>
