@@ -1,6 +1,6 @@
 <script>
-	import { Slidy } from '@slidy/svelte';
-	import { getPhotos } from '../lib/photo';
+	import { Slidy } from '@slidy/svelte'
+	import { getPhotos } from '../lib/photo'
 
 	let index = 0, position = 0;
 </script>

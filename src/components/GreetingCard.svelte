@@ -1,10 +1,10 @@
 <script>
-  export let QRSrc;
-  export let QRAlt;
-  export let ownerName;
-  export let ownerNumber;
-  export let bankName;
-  export let bankBranch;
+  export let QRSrc
+  export let QRAlt
+  export let ownerName
+  export let ownerNumber
+  export let bankName
+  export let bankBranch
 </script>
 
 <div class="card">
@@ -30,8 +30,8 @@
     color: var(--clr-neutral-800);
     background-color: var(--clr-neutral-200);
     /* box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc; */
-    /* overflow: hidden; */
     padding: 0;
+    isolation: isolate;
   }
 
   .card::before,
@@ -53,7 +53,7 @@
   }
 
   .card::after {
-    filter: blur(3.5rem);
+    filter: blur(1.5rem);
   }
 
   @keyframes rotation {

@@ -1,5 +1,5 @@
 <script>
-  import Countdown from 'svelte-countdown/src/index.js';
+  import Countdown from 'svelte-countdown/src/index.js'
 </script>
 
 <Countdown from="2023-03-19 11:00:00" dateFormat="YYYY-MM-DD H:m:s" zone="asia/ho_chi_minh" let:remaining>

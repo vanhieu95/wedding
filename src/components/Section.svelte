@@ -1,8 +1,8 @@
 <script>
-  export let id;
-  export let className;
-  export let sectionStyle = null;
-  export let sectionTitle;
+  export let id
+  export let className
+  export let sectionStyle = null
+  export let sectionTitle
 </script>
 
 <section id={id} class={className} style={sectionStyle}>
@@ -28,23 +28,12 @@
     margin-block-end: 2rem;
   }
 
-  .about-us {
-    /* background-image: var(--about-us-background-mobile); */
+  .about-us,
+  .event, 
+  .greetings {
+    background-image: var(--section-background);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  .event {
-    background-image: var(--event-background);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  @media (min-width: 50rem) {
-    .about-us {
-      /* background-image: var(--about-us-background-desktop); */
-    }
   }
 </style>

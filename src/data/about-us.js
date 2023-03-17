@@ -5,7 +5,7 @@ export const data = [
     isCard: true,
     name: 'Nguyễn Thị Thúy Vân',
     content:
-      'Người phụ nữ hiền diệu, biết thấu hiểu. Ưu điểm ăn nhiều nhưng không lên cân.'
+      'Người phụ nữ hiền dịu, biết thấu hiểu. Ưu điểm ăn nhiều nhưng không lên cân.'
   },
   {
     id: 2,

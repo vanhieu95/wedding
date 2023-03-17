@@ -1,6 +1,6 @@
 <script>
   import EventCountdown from './EventCountdown.svelte'
-import EventLocation from './EventLocation.svelte';
+  import EventLocation from './EventLocation.svelte'
 </script>
 
 <div class="event-content">

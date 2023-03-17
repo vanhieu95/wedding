@@ -1,11 +1,11 @@
 <script>
-  import PersonalCard from './PersonalCard.svelte';
+  import PersonalCard from './PersonalCard.svelte'
 
-  import BrideImage from '../assets/van.jpg';
-  import GroomImage from '../assets/hieu.jpg';
-  import Heart from '../assets/heart.gif';
+  import BrideImage from '../assets/van.jpg'
+  import GroomImage from '../assets/hieu.jpg'
+  import Heart from '../assets/heart.gif'
 
-  import {data} from '../data/about-us';
+  import {data} from '../data/about-us'
 </script>
 
 <div class="about-us-content">

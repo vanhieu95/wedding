@@ -1,40 +1,46 @@
 <script>
-  import Section from './components/Section.svelte';
-  import Header from './components/Header.svelte';
-  import AboutUs from './components/AboutUs.svelte';
-  import Event from './components/Event.svelte';
+  import Section from './components/Section.svelte'
+  import Header from './components/Header.svelte'
+  import AboutUs from './components/AboutUs.svelte'
+  import Event from './components/Event.svelte'
   import Greetings from './components/Greetings.svelte'
   import Albums from './components/Albums.svelte'
 
-  import HeaderBackground from './assets/hieu-and-van.jpg';
-  import AboutUsBackgroundDesktop from './assets/about-us-desktop.jpg';
-  import AboutUsBackgroundMobile from './assets/about-us-mobile.jpg';
+  import HeaderBackground from './assets/hieu-and-van.jpg'
   import EventBackground from './assets/aqua-palace.jpg'
+  import GreetingBackground from './assets/gift.jpg'
 
   import {data as sections} from './data/section';
-  const { aboutUs, event, greetings, albums } = sections;
+  import GreetingCard from './components/GreetingCard.svelte'
+  const { aboutUs, event, greetings, albums } = sections
 </script>
 
 <Header headerStyle="--header-background: url({HeaderBackground})"/>
 
 <main>
-  <Section {...aboutUs} 
-    className="about-us" 
-    sectionStyle="--about-us-background-desktop: url({AboutUsBackgroundDesktop});--about-us-background-mobile: url({AboutUsBackgroundMobile})">
+  <Section {...aboutUs}
+    sectionStyle="--section-background: linear-gradient(
+      to right,
+      var(--clr-neutral-200),
+      var(--clr-neutral-400),
+      var(--clr-neutral-700)
+    );">
     <AboutUs />
   </Section>
 
   <Section {...event}
-    className="event wavy"
-    sectionStyle="--event-background: url({EventBackground})">
+    className={`${event.className} wavy`}
+    sectionStyle="--section-background: url({EventBackground})">
     <Event />
   </Section>
 
-  <Section {...greetings} className="greetings">
-    <Greetings />
+  <Section {...albums}>
+    <Albums />
   </Section>
 
-  <Section {...albums} className="albums spikes">
-    <Albums />
+  <Section {...greetings}
+    className={`${event.className} spikes`}  
+    sectionStyle="--section-background: url({GreetingBackground})">
+    <Greetings />
   </Section>
 </main>

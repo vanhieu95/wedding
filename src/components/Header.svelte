@@ -1,5 +1,5 @@
 <script>
-  export let headerStyle = null;
+  export let headerStyle = null
 </script>
 
 <header class="site-header" style={headerStyle}>
